@@ -26,7 +26,7 @@ public class User {
 	@Column(unique = true)
 	private String username;
 	
-	@Pattern(regexp = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[\\W_]).{8,}$")
+	@Pattern(regexp = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[\\W_]).{8,}$", message = "PAssword must be at least one upper case letter, one lower case letter, one special character and one number, at least 8 characters")
 	// At least one upper case letter, one lower case letter, one special character and one number, at least 8 characters
 	private String password;
 	
